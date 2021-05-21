@@ -1,15 +1,21 @@
 package com.example.gameslibrary.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Platform {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String name;
     private String type;
     private String producer;
     private String generation;
 
+    @ManyToMany(mappedBy = "platforms")
     private Set<Game> games = new HashSet<>();
 
     public Platform() {

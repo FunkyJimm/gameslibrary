@@ -1,16 +1,24 @@
 package com.example.gameslibrary.model;
 
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Game {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String title;
     private String description;
     private String year;
+    @ManyToOne
     private Genre genre;
+    @ManyToOne
     private Publisher publisher;
 
+    @ManyToMany
     private Set<Platform> platforms = new HashSet<>();
 
     public Game() {
