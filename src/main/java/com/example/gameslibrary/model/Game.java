@@ -11,6 +11,7 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
+    @Lob
     private String description;
     private String year;
     @ManyToOne
