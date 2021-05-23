@@ -1,0 +1,14 @@
+package com.example.gameslibrary.commands;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class GenreCommand {
+    private Long id;
+    private String name;
+    private String description;
+}

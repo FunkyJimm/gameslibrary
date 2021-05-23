@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <title>Platformy</title>
+</head>
+<body>
+    <div class="container-fluid" style="margin-top: 0px">
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Platformy</h1>
+                </div>
+                <div class="panel-body">
+                    <div clas="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="thead-inverse">
+                                <th>ID</th>
+                                <th>Nazwa</th>
+                                <th>Producent</th>
+                            </thead>
+                            <tr th:each="platform : ${platforms}">
+                                <td th:text="${platform.id}">123</td>
+                                <td th:text="${platform.name}">NES</td>
+                                <td th:text="${platform.producer}">Nintendo</td>
+                                <td>
+                                    <a href="#" th:href="@{'/platforms/' + ${platform.id} + '/show'}">Pokaż</a>
+                                    <a href="#" th:href="@{'/platforms/' + ${platform.id} + '/edit'}">Edytuj</a>
+                                    <a href="#" th:href="@{'/platforms/' + ${platform.id} + '/delete'}">Usuń</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <title>Biblioteka gier</title>
+</head>
+<body>
+    <div class="container-fluid" style="margin-top: 0px">
+        <div class="row">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title" style="font-size: 36px; text-align: center">Biblioteka Gier</h1>
+                </div>
+                <div class="panel=body">
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center">
+                            <img alt="Where is Mario?" src="/mario.jpg" style="width: 10%">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center">
+                            <a href="#" th:href="@{'/games'}" role="button" class="btn btn-success" style="width: 10%;">Gry</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center">
+                            <a href="#" th:href="@{'/genres'}" role="button" class="btn btn-success" style="width: 10%;">Gatunki</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center">
+                            <a href="#" th:href="@{'/platforms'}" role="button" class="btn btn-success" style="width: 10%;">Platformy</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" style="text-align: center; padding-bottom: 10px">
+                            <a href="#" th:href="@{'/publishers'}" role="button" class="btn btn-success" style="width: 10%;">Wydawcy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer style="text-align: center">
+            <p>Copyright&copy; 2021 by Jakub Czyż</p>
+        </footer>
+    </div>
+</body>
+</html>
