@@ -1,10 +1,17 @@
 package com.example.gameslibrary.model;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Data
+@EqualsAndHashCode(of = {"id"})
+@NoArgsConstructor
 @Entity
 public class Publisher {
 
@@ -14,35 +21,8 @@ public class Publisher {
     private String name;
     private String country;
 
-    public Publisher() {
-    }
-
     public Publisher(String name, String country) {
         this.name = name;
         this.country = country;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    @Override
-    public String toString() {
-        return "Publisher{" +
-                "name='" + name + '\'' +
-                ", country='" + country + '\'' +
-                '}';
     }
 }
