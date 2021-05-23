@@ -11,7 +11,7 @@
 <body>
     <div class="container-fluid" style="margin-top: 0px">
         <div class="row">
-            <div class="col-md-4 col-md-offset-3">
+            <div class="col-md-4 col-md-offset-4">
                 <form th:object="${game}" th:action="@{/game/}" method="post">
                     <input type="hidden" th:field="*{id}"/>
                     <div class="pannel-group">
@@ -21,25 +21,25 @@
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-8 form-group">
                                         <label>Tytuł:</label>
                                         <input type="text" class="form-control" th:field="*{title}"/>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-8 form-group">
                                         <label>Opis:</label>
                                         <input type="text" class="form-control" th:field="*{description}"/>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-8 form-group">
                                         <label>Rok wydania:</label>
                                         <input type="text" class="form-control" th:field="*{year}"/>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-8 form-group">
                                         <label>Gatunek:</label>
                                         <select th:field="*{genre}">
                                             <option th:each="genre : ${genres}" th:value="${genre.id}" th:text="${genre.name} + ' [' + ${genre.description} + ']'"/>
@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6 form-group">
+                                    <div class="col-md-8 form-group">
                                         <label>Platforma:</label>
                                         <select th:field="*{publisher}">
                                             <option th:each="publisher : ${publishers}" th:value="${publisher.id}" th:text="${publisher.name}"/>

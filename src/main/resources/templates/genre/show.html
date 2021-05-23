@@ -11,7 +11,7 @@
 <body>
     <div class="container-fluid" style="margin-top: 0px;">
         <div class="row">
-            <div class="col-md-3 col-md-offset-4">
+            <div class="col-md-4 col-md-offset-4">
                 <div class="panel-group">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
@@ -38,13 +38,14 @@
                                 <div class="col-md-2">
                                     <h5><b>Opis</b></h5>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-10">
                                     <h5 th:text="${genres.description}">Imprezowe, Logiczne, Planszowe</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <input onclick='javascript:window.history.back()' value='Powrót' type='button' class="btn btn-default"/>
             </div>
         </div>
     </div>
